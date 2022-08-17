@@ -19,7 +19,7 @@ feature 'Headhunter edit an interview' do
   end
 
   scenario 'successfully' do
-    fill_in 'Data', with: '13/11/2021'
+    fill_in 'Data', with: '13/11/2060'
     fill_in 'Hora', with: '17:20'
 
     click_on 'Convidar'

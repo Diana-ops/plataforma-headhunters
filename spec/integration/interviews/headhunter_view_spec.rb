@@ -9,7 +9,7 @@ feature 'Headhunter view your interviews' do
     candidate = create(:candidate, full_name: 'Lucas Ribeiro', profession: 'Desenvolvedor Backend')
     apply_job = create(:apply_job, job_opportunity: job_opportunity, candidate: candidate)
     interview = create(:interview, job_opportunity: job_opportunity,
-                                   interview_date: '21/05/2021', hour: '15:30',
+                                   interview_date: '21/05/2060', hour: '15:30',
                                    address: 'Rua Vergueiro, 11', candidate: candidate)
 
     visit job_opportunity_path(job_opportunity)
@@ -25,7 +25,7 @@ feature 'Headhunter view your interviews' do
     expect(page).to have_content('Entrevistas para esta vaga')
     expect(page).to have_link('Desenvolvedor PHP')
     expect(page).to have_content('Rua Vergueiro, 11')
-    expect(page).to have_content('21/05/2021')
+    expect(page).to have_content('21/05/2060')
     expect(page).to have_content('15:30')
     expect(page).to have_link('Lucas Ribeiro')
     expect(page).to have_content('Desenvolvedor Backend')

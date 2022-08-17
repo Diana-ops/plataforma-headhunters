@@ -15,7 +15,7 @@ feature 'Headhunter register a interview' do
     end
 
     scenario 'successfully' do
-      fill_in 'Data', with: '12/11/2021'
+      fill_in 'Data', with: '12/11/2060'
       fill_in 'Hora', with: '18:20'
       fill_in 'Endereço', with: ' Condominio Edifício Morungaba - Alameda Santos, 1293 - Cerqueira César, São Paulo - SP, 01419-001'
 
@@ -71,7 +71,7 @@ feature 'Headhunter register a interview' do
 
       click_on 'Agendar Entrevista'
 
-      fill_in 'Data', with: '12/11/2021'
+      fill_in 'Data', with: '12/11/2060'
       fill_in 'Hora', with: '18:20'
       fill_in 'Endereço', with: ' Condominio Edifício Morungaba - Alameda Santos, 1293 - Cerqueira César, São Paulo - SP, 01419-001'
 

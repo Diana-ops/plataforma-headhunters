@@ -16,7 +16,7 @@ feature 'Headhunter register valid job' do
     fill_in 'Descrição da Vaga', with: 'Desenvolvimento de soluções para saude'
     fill_in 'Habilidades', with: 'Machine Learning, IoT e Big data'
     fill_in 'Faixa Salárial', with: '5000'
-    fill_in 'Data de Contratação', with: '04/05/2021'
+    fill_in 'Data de Contratação', with: '04/05/2060'
     select 'Pleno', from: 'Nível'
     fill_in 'Região', with: 'AV. Washington Soares, 909, Fortaleza'
     fill_in 'Beneficios', with: 'Seguro de Vida, Plano Odontológico e Plano de Saúde'
@@ -32,7 +32,7 @@ feature 'Headhunter register valid job' do
     expect(page).to have_content('Desenvolvimento de soluções para saude')
     expect(page).to have_content('Machine Learning, IoT e Big data')
     expect(page).to have_content('R$ 5.000,00')
-    expect(page).to have_content('04/05/2021')
+    expect(page).to have_content('04/05/2060')
     expect(page).to have_content('Pleno')
     expect(page).to have_content('AV. Washington Soares, 909, Fortaleza')
     expect(page).to have_content('Seguro de Vida, Plano Odontológico e Plano de Saúde')

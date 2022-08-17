@@ -18,10 +18,10 @@ feature 'Candidate view your interviews' do
       apply_job_c = create(:apply_job, job_opportunity: job_opportunity_c, candidate: candidate)
 
       interview = create(:interview, job_opportunity: job_opportunity, candidate: candidate,
-                                     interview_date: '21/05/2021', hour: '15:30',
+                                     interview_date: '21/05/2060', hour: '15:30',
                                      address: 'Rua Vergueiro, 11')
       interview_b = create(:interview, job_opportunity: job_opportunity_b, candidate: candidate,
-                                       interview_date: '21/05/2022', hour: '18:30',
+                                       interview_date: '21/05/2060', hour: '18:30',
                                        address: 'Rua Map, 11')
     end
 
@@ -59,16 +59,17 @@ feature 'Candidate view your interviews' do
 
       expect(page).to have_link('Desenvolvedor PHP')
       expect(page).to have_content('Rua Vergueiro, 11')
-      expect(page).to have_content('21/05/2021')
+      expect(page).to have_content('21/05/2060')
       expect(page).to have_content('15:30')
       expect(page).to have_content('giovana@gmail.com.br')
 
       expect(page).to have_link('Desenvolvedor Rails')
       expect(page).to have_content('Rua Map, 11')
-      expect(page).to have_content('21/05/2022')
+      expect(page).to have_content('21/05/2060')
       expect(page).to have_content('18:30')
       expect(page).to have_content('giovana@gmail.com.br')
     end
+
     xscenario 'have no interview for this job' do
       visit root_path
 
@@ -80,6 +81,7 @@ feature 'Candidate view your interviews' do
       expect(page).not_to have_link('Desenvolvedor Java')
     end
   end
+
   scenario 'any interview register' do
     user = User.create!(email: 'lucas@gmail.com.br', password: '12345678')
     login_as user, scope: :user

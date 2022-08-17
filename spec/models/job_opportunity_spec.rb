@@ -7,7 +7,7 @@ RSpec.describe JobOpportunity, type: :model do
                               company: 'Rebase',
                               description_job: 'Desenvolvimento de Plataformas com TDD',
                               skills: 'Domínio da linguagem Ruby e do framework Ruby on Rails',
-                              deadline: '14/09/2020',
+                              deadline: '14/09/2060',
                               region: 'Mocca - SP',
                               benefits: 'Vale refeição, Academia',
                               office_functions: 'Contribuir com a evolução arquitetural do software visando manutenibilidade e flexibilização para atendimento do negócio.',
