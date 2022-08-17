@@ -2,16 +2,15 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_183643) do
-
+ActiveRecord::Schema[7.0].define(version: 2020_05_21_183643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,8 +39,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.bigint "candidate_id", null: false
     t.bigint "job_opportunity_id", null: false
     t.text "message"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "feedback"
     t.index ["candidate_id"], name: "index_apply_jobs_on_candidate_id"
     t.index ["job_opportunity_id"], name: "index_apply_jobs_on_job_opportunity_id"
@@ -51,8 +50,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.bigint "choice_id", null: false
     t.string "awnser_message"
     t.bigint "proposal_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["choice_id"], name: "index_awnser_proposals_on_choice_id"
     t.index ["proposal_id"], name: "index_awnser_proposals_on_proposal_id"
   end
@@ -64,8 +63,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.string "profile_description"
     t.string "experience"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "formation"
     t.string "courses"
     t.bigint "level_id"
@@ -77,16 +76,16 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
 
   create_table "choices", force: :cascade do |t|
     t.string "option"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.bigint "candidate_id", null: false
     t.bigint "headhunter_id", null: false
     t.text "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["candidate_id"], name: "index_comments_on_candidate_id"
     t.index ["headhunter_id"], name: "index_comments_on_headhunter_id"
   end
@@ -94,8 +93,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
   create_table "feedbacks", force: :cascade do |t|
     t.string "message"
     t.bigint "apply_job_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "choice_id", null: false
     t.index ["apply_job_id"], name: "index_feedbacks_on_apply_job_id"
     t.index ["choice_id"], name: "index_feedbacks_on_choice_id"
@@ -107,8 +106,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_headhunters_on_email", unique: true
     t.index ["reset_password_token"], name: "index_headhunters_on_reset_password_token", unique: true
   end
@@ -117,8 +116,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.date "interview_date"
     t.time "hour"
     t.string "address"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "job_opportunity_id", null: false
     t.bigint "candidate_id", null: false
     t.index ["candidate_id"], name: "index_interviews_on_candidate_id"
@@ -137,8 +136,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.string "benefits"
     t.string "office_functions"
     t.string "company_expectations"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "headhunter_id", null: false
     t.index ["headhunter_id"], name: "index_job_opportunities_on_headhunter_id"
     t.index ["level_id"], name: "index_job_opportunities_on_level_id"
@@ -146,8 +145,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
 
   create_table "levels", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "proposals", force: :cascade do |t|
@@ -155,8 +154,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.bigint "job_opportunity_id", null: false
     t.bigint "candidate_id", null: false
     t.string "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["candidate_id"], name: "index_proposals_on_candidate_id"
     t.index ["job_opportunity_id"], name: "index_proposals_on_job_opportunity_id"
   end
@@ -167,8 +166,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_183643) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -1,9 +1,9 @@
 version: '3'
 services:
-  rails:
+  web:
     build: .
     command: rails s -b 0.0.0.0
-    container_name: meu_projeto_rails
+    container_name: headhunters_container
     ports:
       - 3000:3000
     volumes:
@@ -20,6 +20,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - meu_projeto_rails_data:/var/lib/postgresql/data
+      - headhunters_data:/var/lib/postgresql/data
 volumes:
-  meu_projeto_rails_data:
+  headhunters_data:

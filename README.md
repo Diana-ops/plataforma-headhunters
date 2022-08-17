@@ -15,11 +15,11 @@
 
 :memo: Planejamento das atividades no [Trello](https://trello.com/b/sdJc3alw/tarefas-headhunters-treina-dev) 
 
-:memo: Planejamento das [views](https://github.com/Diana-ops/plataforma-headhunters-treina-dev/blob/master/views.md)
+:memo: Planejamento das [views](https://github.com/reginadiana/headhunters/blob/master/views.md)
 
-:memo: Planejamento do [database](https://github.com/Diana-ops/plataforma-headhunters-treina-dev/blob/master/database.md)
+:memo: Planejamento do [database](https://github.com/reginadiana/headhunters/blob/master/database.md)
 
-:memo: Planejamento do [layout](https://github.com/Diana-ops/plataforma-headhunters-treina-dev/blob/master/layout.md)
+:memo: Planejamento do [layout](https://github.com/reginadiana/headhunters/blob/master/layout.md)
 
 ## Lista de Conteúdos
 
@@ -138,18 +138,18 @@ Algumas instalações serão necessárias antes de iniciar o projeto.
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/Diana-ops/plataforma-headhunters-treina-dev
+git clone https://github.com/reginadiana/headhunters
 ```
 Entre na pasta
 ```
-cd plataforma-headhunters-treina-dev
+cd headhunters
 ```
 
 Agora vamos rodar a aplicação com Docker:
 
 `docker-compose build`
 
-`docker-compose run --service-ports rails bash`
+`docker-compose run --service-ports web bash`
 
 Um novo terminal irá abrir, então, execute:
 
@@ -161,7 +161,7 @@ $ rails s -b 0.0.0.0
 
 ## Casos de Uso :busts_in_silhouette:
 
-Alguns candidatos, recrutadores e outros objetos já estão configurados na aplicação e foram criados no arquivo [bin/seeds.rb](https://github.com/Diana-ops/plataforma-headhunters-treina-dev/blob/master/db/seeds.rb).
+Alguns candidatos, recrutadores e outros objetos já estão configurados na aplicação e foram criados no arquivo [bin/seeds.rb](https://github.com/reginadiana/headhunters/blob/master/db/seeds.rb).
 
 ### Acessando a plataforma como candidato 
 
@@ -177,7 +177,6 @@ headhunter_a = Headhunter.create!(email: 'lucas22@outlook.com.br', password: '11
 ## Rodando os testes :memo:
 
 ```
-$ cd rental-cars-treina-dev-1
 $ rspec or bundle exec rspec
 ```
 
@@ -192,15 +191,10 @@ Para ver as rotas disponíveis na aplicação, execute:
 ```
 $ rails routes -g <name of controller>
 ```
-
-## Resolvendo Problemas :exclamation:
-
-Em [issues](https://github.com/Diana-ops/rental-cars-treina-dev-1/issues) foram abertos alguns problemas gerados durante o desenvolvimento desse projeto e como foram resolvidos. 
-
 ## Licença :trident:
 
-The [MIT License](https://github.com/Diana-ops/plataforma-headhunters-treina-dev/blob/master/LICENSE) (MIT)
+The [MIT License](https://github.com/reginadiana/headhunters/blob/master/LICENSE) (MIT)
 
-Copyright :copyright: 2020 HandHunters
+Copyright :copyright: 2022 HandHunters
 <br/>
 <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102"/>
